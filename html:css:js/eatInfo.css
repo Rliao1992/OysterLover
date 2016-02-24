@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#eatInfo::-webkit-scrollbar { width: 0 !important }
+
+#cookTip::-webkit-scrollbar { width: 0 !important }
+
+#shopping::-webkit-scrollbar { width: 0 !important }
+
+#catch::-webkit-scrollbar { width: 0 !important }
+
+#eatInfo, #cookTip, #shopping, #catch {
+	margin-top: 30%;
+	position: fixed;
+	margin-left: 10%;
+	margin-right: auto;
+	padding: 0 0 0 0;
+	width: 80%;
+	height: 85%;
+	overflow: scroll;
+	font-family: "Lato", serif;
+	color: rgba(255,255,255,1.00);
+	display: none;
+}
+
+
+#eatInfo > ul, #shopping > ul{
+	margin-top: 0px;
+
+	
+}
+
+#eatInfo > ul > li, #shopping > ul > li{
+	margin-top: 20px;
+
+	
+}
+h1.rName, h2.reName{
+	margin-top: 32px;
+	text-align: center;
+	font-weight: 300;
+	font-size: 26px;
+	list-style: none;
+	padding: 0;
+}
+
+li.ad{
+	font-weight: 300;
+	list-style-image: url(../Contents/list-img-a.png);
+	font-size:20px;
+}
+
+li.phone{
+	list-style-image: url(../Contents/list-img-p.png);
+	font-size: 20px;
+	font-weight: 300;
+}
+
+li.url{
+	list-style-image: url(../Contents/list-img-u.png);
+	font-size: 20px;
+	font-weight: 300;
+}
+
+img.rPic {
+	width: 80%;
+	height: auto;
+	margin-left: 10%;
+
+}
+
+p.ing, p.dir{
+	font-size: 20px;
+	font-weight: 300;
+}
+
+a {
+	color: hsla(0,0%,100%,1.00);
+	text-decoration: none;
+}

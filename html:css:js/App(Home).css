@@ -1,0 +1,159 @@
+@charset "UTF-8";
+/* CSS Document */
+*::-webkit-scrollbar { width: 0 !important }
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+
+body{
+	margin: 0 0 0 0;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-image: url(../Contents/BackGround.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	overflow: scroll;
+	
+}
+
+#filter{
+	position: fixed;	
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+	height: 100%;
+	width: 100%;
+	background-color: hsla(0,0%,24%,0);
+	overflow: scroll;
+}
+
+#b{
+	position: fixed;
+	width: 30%;
+	text-align: center;
+	height: 8%;
+	color: hsla(0,0%,100%,1.00);
+	font-family: "Lato", serif;
+	font-weight: 300;
+	font-size: 2em;
+	line-height: 1.8em;
+	background-color: rgba(148,39,199,1.00);
+	
+}
+
+#b:hover{
+	background-color: rgba(72,209,147,1.00);
+}
+
+#logo {
+	width: 55%;
+	height: auto;
+}
+
+#title {
+	font-family: "Lato", serif;
+	font-weight: 400;
+	color: rgba(255,255,255,1.00);
+	font-size: 3em;
+	text-align: center;
+	margin-top: 15%;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 5%;
+	width: 80%;
+	padding: 0 0 0 0;
+}
+
+#Home {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 0 0 0;
+	width: 76%;
+	height: 60%;
+	background-color: transparent;
+	overflow: visible;
+}
+
+#eat, #cook, #buy, #farm {
+	background-color: rgba(148,39,199,1.00);
+	font-family: "Lato", serif;
+	font-weight: 300;
+	font-size: 1em;
+	color:hsla(0,0%,100%,1.00);
+}
+
+
+#leftColoum{
+	float: left;
+	height: 60%;
+	clear: both;
+	width: 49%;
+	overflow: hidden;
+	margin: 0 0 0 0;
+}
+
+#gap{
+	height: 3%;
+}
+#eat{
+	height: 48.5%;
+	text-align: center;
+}
+
+#cook{
+	text-align: center;
+	height: 49%;
+	margin-top: 3%;
+	margin-bottom: 0;
+}
+
+#buy {
+	text-align: center;
+	margin-left: 2%;
+	width: 48.5%;
+	float:left;
+	height: 60%;
+}
+#buy > img, #cook > img, #eat > img{
+	margin-top: 10%;
+}
+
+#cook > p, #eat > p {
+	position: relative;
+	text-align: left;
+	margin-left: 2%;
+	bottom: 3%;
+}
+
+#buy > p{
+	position: absolute;
+	text-align: left;
+	margin-left: 2%;
+}
+#farm {
+	position: absolute;
+	width: 100%;
+	height: 30%;
+	top: 62%;
+	
+}
+
+#farm > img{
+	float: left;
+	position: absolute;
+	top: 28%;
+	left: 20%;
+}
+
+
+#farm > p{
+	position: absolute;
+	float: left;
+	top: 22%;
+	left: 54%;
+}

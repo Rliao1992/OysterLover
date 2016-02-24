@@ -1,0 +1,433 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Oyster Lover</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="appScript.js"></script>
+
+<link rel="stylesheet" title="Disabled for Preview-in-Browser: App(Home).css" type="text/css" />
+<style type="text/css">
+
+/* CSS Document */
+*::-webkit-scrollbar { width: 0 !important }
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+
+body{
+	margin: 0 0 0 0;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-image: url(../Contents/BackGround.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	overflow: scroll;
+	
+}
+
+#filter{
+	position: fixed;	
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+	height: 100%;
+	width: 100%;
+	background-color: hsla(0,0%,24%,0);
+	overflow: scroll;
+}
+
+#b{
+	position: fixed;
+	width: 30%;
+	text-align: center;
+	height: 8%;
+	color: hsla(0,0%,100%,1.00);
+	font-family: "Lato", serif;
+	font-weight: 300;
+	font-size: 2em;
+	line-height: 1.8em;
+	background-color: rgba(148,39,199,1.00);
+	
+}
+
+#b:hover{
+	background-color: rgba(72,209,147,1.00);
+}
+
+#logo {
+	width: 55%;
+	height: auto;
+}
+
+#title {
+	font-family: "Lato", serif;
+	font-weight: 400;
+	color: rgba(255,255,255,1.00);
+	font-size: 3em;
+	text-align: center;
+	margin-top: 15%;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 5%;
+	width: 80%;
+	padding: 0 0 0 0;
+}
+
+#Home {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 0 0 0;
+	width: 76%;
+	height: 60%;
+	background-color: transparent;
+	overflow: visible;
+}
+
+#eat, #cook, #buy, #farm {
+	background-color: rgba(148,39,199,1.00);
+	font-family: "Lato", serif;
+	font-weight: 300;
+	font-size: 1em;
+	color:hsla(0,0%,100%,1.00);
+}
+
+
+#leftColoum{
+	float: left;
+	height: 60%;
+	clear: both;
+	width: 49%;
+	overflow: hidden;
+	margin: 0 0 0 0;
+}
+
+#gap{
+	height: 3%;
+}
+#eat{
+	height: 48.5%;
+	text-align: center;
+}
+
+#cook{
+	text-align: center;
+	height: 49%;
+	margin-top: 3%;
+	margin-bottom: 0;
+}
+
+#buy {
+	text-align: center;
+	margin-left: 2%;
+	width: 48.5%;
+	float:left;
+	height: 60%;
+}
+#buy > img, #cook > img, #eat > img{
+	margin-top: 10%;
+}
+
+#cook > p, #eat > p {
+	position: relative;
+	text-align: left;
+	margin-left: 2%;
+	bottom: 3%;
+}
+
+#buy > p{
+	position: absolute;
+	text-align: left;
+	margin-left: 2%;
+}
+#farm {
+	position: absolute;
+	width: 100%;
+	height: 30%;
+	top: 62%;
+	
+}
+
+#farm > img{
+	float: left;
+	position: absolute;
+	top: 28%;
+	left: 20%;
+}
+
+
+#farm > p{
+	position: absolute;
+	float: left;
+	top: 22%;
+	left: 54%;
+}
+
+
+</style>
+<link rel="stylesheet" title="Disabled for Preview-in-Browser: eatInfo.css" type="text/css" />
+<style type="text/css">
+
+/* CSS Document */
+
+#eatInfo::-webkit-scrollbar { width: 0 !important }
+
+#cookTip::-webkit-scrollbar { width: 0 !important }
+
+#shopping::-webkit-scrollbar { width: 0 !important }
+
+#catch::-webkit-scrollbar { width: 0 !important }
+
+#eatInfo, #cookTip, #shopping, #catch {
+	margin-top: 30%;
+	position: fixed;
+	margin-left: 10%;
+	margin-right: auto;
+	padding: 0 0 0 0;
+	width: 80%;
+	height: 85%;
+	overflow: scroll;
+	font-family: "Lato", serif;
+	color: rgba(255,255,255,1.00);
+	display: none;
+}
+
+
+#eatInfo > ul, #shopping > ul{
+	margin-top: 0px;
+
+	
+}
+
+#eatInfo > ul > li, #shopping > ul > li{
+	margin-top: 20px;
+
+	
+}
+h1.rName, h2.reName{
+	margin-top: 32px;
+	text-align: center;
+	font-weight: 300;
+	font-size: 26px;
+	list-style: none;
+	padding: 0;
+}
+
+li.ad{
+	font-weight: 300;
+	list-style-image: url(../Contents/list-img-a.png);
+	font-size:20px;
+}
+
+li.phone{
+	list-style-image: url(../Contents/list-img-p.png);
+	font-size: 20px;
+	font-weight: 300;
+}
+
+li.url{
+	list-style-image: url(../Contents/list-img-u.png);
+	font-size: 20px;
+	font-weight: 300;
+}
+
+img.rPic {
+	width: 80%;
+	height: auto;
+	margin-left: 10%;
+
+}
+
+p.ing, p.dir{
+	font-size: 20px;
+	font-weight: 300;
+}
+
+a {
+	color: hsla(0,0%,100%,1.00);
+	text-decoration: none;
+}
+
+
+</style>
+<link rel='stylesheet' title="Disabled for Preview-in-Browser: http://fonts.googleapis.com/css?family=Lato:100,300,400" type='text/css'>
+<style type="text/css">
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Lato Hairline'), local('Lato-Hairline'), url(http://fonts.gstatic.com/s/lato/v11/zJY4gsxBiSo5L7tNutxFNg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(http://fonts.gstatic.com/s/lato/v11/nj47mAZe0mYUIySgfn0wpQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(http://fonts.gstatic.com/s/lato/v11/v0SdcGFAl2aezM9Vq_aFTQ.ttf) format('truetype');
+}
+
+
+</style>
+</head>
+
+<body>
+<!--Before
+<div id-"before">
+<video id="intro" src="../Contents/Home.mp4" width="375" height="667" autoplay></video>
+<img id="logo" src="../Planning/Logo.png" hidden/>
+</div>-->
+<div id="filter">
+
+<div id="b" hidden="true">Home</div>
+
+<!--Title-->
+<h1 id="title" ><img id="logo" src="../Contents/Logo.png" width="260.8" height="209.7"/></h1>
+<!--Title End-->
+
+<!--Home-->
+<script src="Rotate.js"></script>
+<div id="Home">
+
+<div id="leftColoum">
+<div id="eat">
+<img class="icon" src="../Contents/Icon-D.png" width="50" height="60" />
+<p>Where to eat</p>
+</div>
+
+
+<div id="cook" >
+<img class="icon" src="../Contents/Icon-C.png" width="50" height="60"/>
+<p>How to cook</p>
+</div>
+</div>
+
+<div id="buy">
+<img class="icon" src="../Contents/icon-B.png" width="50" height="60"/>
+<p>Findout<br/>
+where you<br/>
+can<br/>
+pourchase<br/>
+oyster in<br/> 
+Vancouver.</p>
+</div>
+
+<div id="farm">
+<img class="icon" src="../Contents/Icon-F.png" width="50" height="60"/>
+<p>Find out where<br/> 
+you can pick<br/>
+oyster in BC.<br/>
+</p>
+</div>
+
+
+</div>
+</div>
+
+<!--Home END-->
+
+
+
+<!--Restaurant -->
+<div id=eatInfo>
+
+<h1 class="rName">Oyster Express</h1>
+<img  class="rPic" src="../Contents/oExpress.png"/>
+<ul>
+<li class="ad">296 Keefer Street<br/>
+Vancouver, BC V6A 1X5</li>
+<li class="phone">(604) 684-3300</li>
+<li class="url"><a href="https://www.oysterexpress.ca">oysterexpress.ca</a></li>
+</ul>
+
+<h1 class="rName">Rodney's Oyster House</h1>
+<img class="rPic" src="../Contents/rOyster.png"/>
+<ul>
+<li class="ad">1228 Hamilton Street<br/>
+Vancouver, BC V6B 6L2</li>
+<li class="phone">(604) 609-0080</li>
+<li class="url"><a href="http://rohvan.com/">rohvan.com</a></li>
+</ul>
+
+<h1 class="rName">Rodney's Oyster House (Gastown)</h1>
+<img class="rPic" src="../Contents/rOysterG.png"/>
+<ul>
+<li class="ad">52 Powell Street<br/>
+Vancouver, BC V6A 1E7</li>
+<li class="phone">(604) 685-2005</li>
+<li class="url"><a href="http://rohvan.com/">rohvan.com</a></li>
+</ul>
+</div>
+<!--Restaurant End -->
+
+<!--Cook Tips-->
+<div id="cookTip">
+<h2 class="reName">Steam Steamed Oysters with Gingers</h2>
+<img class="rPic" src="../Contents/steamedOG.png"/>
+<p class="ing"><strong>Ingredients :</strong><br/><br/>
+1 dozen oysters (on the half shell)<br/><br/>
+½ c. of finely chopped green onions<br/><br/>
+½ c. of finely chopped fresh ginger<br/><br/>
+2 cloves of finely chopped garlic<br/><br/>
+½ c. of butter<br/><br/>
+Salt & pepper to taste</p>
+<p class="dir"><strong>Directions</strong><br/><br/>
+1.	Melt butter & then add ginger, garlic, onions, salt, and pepper to melted butter mixture.<br/><br/>
+
+2.	Steam oysters in another larger pot for 10minutes.<br/><br/>
+
+3.	When oysters have been steamed, add 1 tbsp. of mixture to each individual oyster & serve hot.<br/><br/>
+</p>
+</div>
+<!--Cook Tips End-->
+
+<!--Purchase-->
+<div id="shopping">
+<h2 class="reName">Steveston Fisherman’s Wharf</h2>
+<img class="rPic" src="../Contents/fisherMan.jpg" />
+<ul>
+<li class="ad">3880 Bayview Street, Richmond, BC </li>
+<li class="url"><a href="http://www.stevestonharbour.com">stevestonharbour.com</a></li>
+</ul>
+<h2 class="reName">The Daily Catch Seafood Company</h2>
+<img class="rPic" src="../Contents/Daily-Catch.jpg" />
+<ul>
+<li class="ad">1418 Commercial Dr, Vancouver, BC V5L 3X9</li>
+<li class="url"><a href="http://www.dailycatch.org">dailycatch.org</a></li>
+</ul>
+</div>
+<!--Purchase-->
+
+<!--Catch-->
+<div id="catch">
+<h2 class="reName">Baynes Sound Recreational Shellfish Reserve</h2>
+<img class="rPic" src="../Contents/bSound.png"/>
+<p class="ing">The Baynes Sound Recreational Shellfish Reserve is located on the south side of Baynes Sound parallel to the Island Highway.<br/><br/>
+This shellfish reserve is a productive beach covering approximately 14 hectares supporting an abundance of shellfish species. </p>
+<p class="dir"><strong>Before You Harvest:</strong><br/><br/>
+<strong>1.</strong>	You must check for shellfish closures by calling 
+1-866-431-3474 or check online closure notices. <br/><br/>
+<strong>2.	</strong>You are harvesting in Area 14-15 and 14-8
+You must have a valid <a href="http://www.pac.dfo-mpo.gc.ca/fm-gp/rec/licence-permis/index-eng.htm#Tidal_Licensing">Tidal Water Sport Fishing Licence</a>.
+<ul>
+<li class="ad">5848 Island Hwy S, Union Bay, BC <br/>V0R 3B0</li>
+</ul>
+</p>
+
+</div>
+<!--Catch End-->
+
+
+</div>
+</body>
+</html>
